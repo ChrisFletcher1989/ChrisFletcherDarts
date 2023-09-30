@@ -3,6 +3,7 @@ let box= document.getElementsByClassName("box")
 let option= document.getElementsByClassName("option")
 let randomise= document.getElementById("randomise")
 let numberOfPlayers=document.getElementById("competitors")
+let printPDF=document.getElementById("generatePDF")
 let inputElements = document.querySelectorAll(".newPlayers"); 
 let addPlayers = () =>{
     let a = numberOfPlayers.value
@@ -119,9 +120,14 @@ let addNames = () => {
         game+=0.5
     }
   };
+  function printFunction(){
+    window.print()
+  }
   
     numberOfPlayers.addEventListener("click", addPlayers);
     randomise.addEventListener("click", addNames);
+    printPDF.addEventListener("click", printFunction);
+
 
 
 //create new box for competitors x input
